@@ -1,0 +1,19 @@
+<modal confirm-text="确定" hidden="{{!isShowModal}}" no-cancel bindconfirm="onModalConfirm">
+    <view style="text-align: center"><text>{{modalContent}}</text></view>
+</modal>
+<loading hidden="{{!isShowLoading}}">
+    添加中...
+</loading>
+<toast hidden="{{!isShowToast}}">
+    操作成功
+</toast>
+<view class="title">
+    <text>{{task.title}}</text>
+</view>
+<view class="content">
+    <text>{{task.content}}</text>
+</view>
+<view>
+    <button class="edit-button" type="warn" size="mini" bindtap="editTask">修改</button>
+    <button class="done-button" type="primary" size="mini" bindtap="finishTask">标记完成</button>
+</view>

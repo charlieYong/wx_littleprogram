@@ -1,0 +1,17 @@
+/* note.wxss */
+
+.submit-button {
+  position: absolute;
+  left: 10rpx;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+
+.title {
+    padding: 10rpx;
+    border-bottom: 1rpx solid #d0d0d0;
+}
+
+.content {
+    padding: 10rpx;
+}

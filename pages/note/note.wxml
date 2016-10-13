@@ -1,0 +1,22 @@
+<modal confirm-text="确定" hidden="{{!isShowModal}}" no-cancel bindconfirm="onModalConfirm">
+<view style="text-align: center"><text>{{modalContent}}</text></view>
+</modal>
+<loading hidden="{{!isShowLoading}}">
+    添加中...
+</loading>
+<toast hidden="{{!isShowToast}}">
+    添加成功
+</toast>
+<view>
+    <form bindsubmit="onSubmit">
+        <view class="title">
+            <input name="title" placeholder="点击输入标题" value="{{isAdd ? '' : task.title}}" />
+        </view>
+        <view class="content">
+           <input name="content" placeholder="点击输入内容" value="{{isAdd ? '' : task.content}}"/>
+        </view>
+        <view>
+            <button formType="submit" class="submit-button" type="primary" size="mini">确定</button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,22 @@
+.title {
+    padding: 10rpx;
+    border-bottom: 1rpx solid #d0d0d0;
+}
+
+.content {
+    padding: 10rpx;
+}
+
+.done-button {
+  position: absolute;
+  left: 55%;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+
+.edit-button {
+  position: absolute;
+  left: 10rpx;
+  right: 55%;
+  bottom: 10rpx;
+}
