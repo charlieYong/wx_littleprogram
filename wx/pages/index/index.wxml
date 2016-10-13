@@ -2,7 +2,11 @@
 <loading hidden="{{isDataOk}}">
     加载中...
 </loading>
-<view><text class="title">{{date}}</text></view>
+<view class="nav-bar">
+  <button class="nav-left-button" type="default" size="mini" bindtap="toPrevDate">Prev</button>
+  <text class="title">{{date}}</text>
+  <button class="nav-right-button" type="default" size="mini" bindtap="toNextDate">Next</button>
+</view>
 <view class="no-record" wx:if="{{!tasks || tasks.length <= 0}}"><text>今日无事项</text></view>
 <view>
   <label class="routine-list" wx:for="{{tasks}}" wx:for-item="item">

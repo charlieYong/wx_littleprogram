@@ -1,4 +1,6 @@
 //index.js
+
+var util = require('../../utils/util.js')
 // 界面逻辑
 Page({
   data: {
@@ -21,10 +23,7 @@ Page({
     if (this.data.dayDiff != 0) {
       d.setDate (d.getDate () + this.data.dayDiff)
     }
-    var year = d.getFullYear()
-    var month = d.getMonth() + 1
-    var day = d.getDate()
-    var date = year.toString() + month.toString() + day.toString()
+    var date = util.formatDate (d)
     this.setData ({date: date})
     getApp().setDate (date)
   }, 
@@ -58,5 +57,15 @@ Page({
     wx.navigateTo({
       url: "../note/note?type=add"
     })
-  }
+  },
+  toPrevDate: function (e) {
+    this.setData ({dayDiff: this.data.dayDiff-1})
+    this.updateCurDate ()
+    this.syncTasksData ()
+  },
+  toNextDate: function (e) {
+    this.setData ({dayDiff: this.data.dayDiff+1})
+    this.updateCurDate ()
+    this.syncTasksData ()
+  },
 })

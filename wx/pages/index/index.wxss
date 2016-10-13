@@ -1,9 +1,27 @@
 /**index.wxss**/
 
+.nav-bar {
+  top: 50rpx;
+  bottom: 200rpx;
+  border-bottom: 1rpx solid #d0d0d0;
+  padding: 30rpx;
+}
+
+.nav-left-button {
+  position: absolute;
+  left: 10rpx;
+}
+
+.nav-right-button {
+  position: absolute;
+  right: 10rpx;
+}
+
 .title {
-  display: block;
+  position: relative;
+  left: 40%;
+  right: 35%;
   text-align: center;
-  text-decoration: underline;
 }
 
 .no-record {
