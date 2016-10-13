@@ -2,8 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/task/task",
-    "pages/note/note",
-    "pages/logs/logs"
+    "pages/note/note"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -3,6 +3,7 @@
     加载中...
 </loading>
 <view><text class="title">{{date}}</text></view>
+<view class="no-record" wx:if="{{!tasks || tasks.length <= 0}}"><text>今日无事项</text></view>
 <view>
   <label class="routine-list" wx:for="{{tasks}}" wx:for-item="item">
     <text class="{{item.isDone ? 'task-finish' : 'task-normal'}}" id="{{item.id}}" bindtap="itemOnClick">

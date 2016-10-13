@@ -6,7 +6,9 @@ App({
   date: "",
   // 使用服务器数据初始化
   initTasks: function (data) {
-    this.tasks = data
+    if (data) {
+      this.tasks = data
+    }
   },
   // 更新日期
   setDate: function (date) {
@@ -18,6 +20,10 @@ App({
       this.tasks[this.date] = []
     }
     this.tasks[this.date].push (task)
+  },
+  // 获取当日的任务列表
+  getCurDateTaskList: function () {
+    return this.tasks[this.date] ? this.tasks[this.date] : []
   },
   // 根据任务ID获取任务数据
   getTaskByID: function (id) {

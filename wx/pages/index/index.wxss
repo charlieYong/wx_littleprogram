@@ -6,6 +6,15 @@
   text-decoration: underline;
 }
 
+.no-record {
+  position: absolute;
+  text-align: center;
+  left: 10rpx;
+  right: 10rpx;
+  bottom: 50%;
+  top: 30%; 
+}
+
 .routine-list {
   display: flex;
   flex-direction: column;

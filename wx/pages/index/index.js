@@ -31,7 +31,7 @@ Page({
   // 同步tasks数据
   syncTasksData: function () {
     this.setData ({
-      tasks: getApp ().tasks[this.data.date]
+        tasks: getApp ().getCurDateTaskList ()
     })
   },
   // 事项被点击
@@ -48,8 +48,10 @@ Page({
     })
   },
   onServerResponse: function (ret) {
-    getApp().initTasks (ret.data.data)
-    this.syncTasksData ()
+    if (ret.data.data) {
+      getApp().initTasks (ret.data.data)
+      this.syncTasksData ()
+    }
     this.setData ({isDataOk: true})
   },
   addNewTask: function(e) {
